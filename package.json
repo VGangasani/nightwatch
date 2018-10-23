@@ -1,0 +1,56 @@
+{
+  "name": "nightwatch-cucumber",
+  "version": "1.0.0",
+  "description": "",
+  "main": "nightwatch.conf.js",
+  "private": true,
+
+  "scripts": { 
+    "e2e-test": "nightwatch",
+    "e2e-test:chrome": "npm run e2e-test -- --env chrome",
+    "e2e-test:firefox": "npm run e2e-test -- --env firefox",
+    "e2e-test:safari": "npm run e2e-test -- --env safari",
+    "e2e-test:IE": "npm run e2e-test -- --env IE",
+    "e2e-test:Edge": "npm run e2e-test -- --env Edge",
+    "e2e-test:Android": "npm run e2e-test -- --env Android",
+    "e2e-test:iphone": "npm run e2e-test -- --env iphone",
+
+    "e2e-test:parallel":"npm run e2e-test -- --env chrome,firefox,safari,IE,Edge", 
+    "e2e-report": "node create-html-report.js",
+    "debug": "node --inspect-brk node_modules/.bin/nightwatch --env chrome"
+  },
+ 
+  "dependencies": {
+    "apickli": "latest",
+    "chai": "3.5.0",  
+    "eslint": "2.13.1",
+    "eslint-config-airbnb-base": "3.0.1",
+    "eslint-plugin-import": "1.9.2",
+    "cucumber-pretty": "^1.4.0",
+    "chromedriver": "^2.36.0",
+    "geckodriver": "^1.10.0",
+    "iedriver": "3.0.0",
+    "nightwatch": "^0.9.20",
+    "nightwatch-cucumber": "^9.1.2",
+    "selenium-server": "^3.14.0",
+    "lodash-merge": "",
+    "moment": "",
+    "phantomjs-prebuilt": "2.1.14",
+    "request": "2.79.0"
+  
+  },
+
+
+  "devDependencies": {
+    "saucelabs": "1.4.0",
+    "cucumber": "^4.2.1",
+    "cucumber-html-reporter": "^4.0.4",
+    "cucumber-parallel": "^2.0.3"
+  },
+  "author": "Vijay",
+  "license": "MIT"  
+}
+
+
+
+
